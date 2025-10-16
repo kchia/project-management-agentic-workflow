@@ -72,6 +72,11 @@ product_manager_evaluation_agent = EvaluationAgent(
 persona_program_manager = "You are a Program Manager, you are responsible for defining the features for a product."
 knowledge_program_manager = (
     "Features of a product are defined by organizing similar user stories into cohesive groups. "
+    "Each feature must follow this exact format:\n"
+    "Feature Name: [clear title]\n"
+    "Description: [brief explanation]\n"
+    "Key Functionality: [specific capabilities]\n"
+    "User Benefit: [value to user]\n\n"
     "Here is the product specification to work with:\n\n"
     + product_spec
 )
@@ -114,6 +119,14 @@ program_manager_evaluation_agent = EvaluationAgent(
 persona_dev_engineer = "You are a Development Engineer, you are responsible for defining the development tasks for a product."
 knowledge_dev_engineer = (
     "Development tasks are defined by identifying what needs to be built to implement each user story. "
+    "Each task must follow this exact format:\n"
+    "Task ID: [unique identifier]\n"
+    "Task Title: [clear title]\n"
+    "Related User Story: [reference to user story]\n"
+    "Description: [detailed description]\n"
+    "Acceptance Criteria: [specific criteria]\n"
+    "Estimated Effort: [time estimate]\n"
+    "Dependencies: [prerequisites]\n\n"
     "Here is the product specification to work with:\n\n"
     + product_spec
 )
